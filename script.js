@@ -52,7 +52,7 @@ function addToCart(productId) {
 
 // Remove item from cart
 function removeFromCart(productId) {
-	cardIdList.
+	// cardIdList.
 }
 
 // Clear cart
