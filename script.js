@@ -34,7 +34,7 @@ function renderCart() {
 	 cartList.innerHTML = ""
 	cartIdList.forEach((productId) => {
 		const index = productId;
-		console.log("index",index)
+		// console.log("index",index)
 		const product = products[productId-1]
 	    const li = document.createElement("li");
 	    li.innerHTML = `${product.name} - $${product.price}`;
@@ -46,7 +46,7 @@ function renderCart() {
 function addToCart(productId) {
 	cartIdList.push(productId)
 	sessionStorage.setItem('sessionCart', JSON.stringify(cartIdList))
-	console.log(sessionStorage.getItem('sessionCart'))
+	// console.log(sessionStorage.getItem('sessionCart'))
 	renderCart()
 }
 
