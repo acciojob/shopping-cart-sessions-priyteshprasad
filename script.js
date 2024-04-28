@@ -37,7 +37,7 @@ function renderCart() {
 		// console.log("index",index)
 		const product = products[productId-1]
 	    const li = document.createElement("li");
-	    li.innerHTML = `${product.name} - $${product.price}`;
+	    li.innerHTML = `${product?.name} - $${product?.price}`;
 	    cartList.appendChild(li);
   });
 }
@@ -45,7 +45,7 @@ function renderCart() {
 // Add item to cart
 function addToCart(productId) {
 	cartIdList.push(productId)
-	sessionStorage.setItem('sessionCart', JSON.stringify(cartIdList))
+	sessionStorage.setItem('sessionCart', cartIdList)
 	// console.log(sessionStorage.getItem('sessionCart'))
 	renderCart()
 }
